@@ -4,6 +4,11 @@
 .min-h-screen {
     min-height: 84.4vh !important;
 }
+.center{
+    margin: auto;
+    margin-top: 1.5%;
+
+}
 /* .v{
     visibility: hidden;
 } */
