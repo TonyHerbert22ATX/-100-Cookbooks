@@ -26,17 +26,31 @@
     </div>
   </div>
 </div>
-  <div class="container">
+
+<div class="container">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure><a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>" alt="picture of <%=posts[i].title%>">
+            </a></figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      <%=posts[i].title%>
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p><%=posts[i].caption%></p>
+    <div class="card-actions justify-end">
+      <div class="badge badge-outline"><%=posts[i].meatVeggie%></div>
+      <div class="badge badge-outline"><%=posts[i].cuisine%></div> 
+      <div class="badge badge-outline"><%=posts[i].time%></div>
+    </div>
+  </div>
+</div>
         <% } %>
         </ul>
     </div>
   </div>  
+
 <%- include('partials/footer') -%>
