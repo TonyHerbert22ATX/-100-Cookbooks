@@ -47,6 +47,7 @@
         <%}%>
       <h1 class="text-5xl font-bold"><%= post.title %></h1>
       <p><%= post.caption %></p>
+      <br>
       <img class="img-fluid max-w-sm rounded-lg shadow-2xl" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <form
@@ -63,7 +64,6 @@
       </div>
     </div>
     <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
       <p><%= post.ingredients %></p>
       <p><%= post.instructions %></p>
     </div>
